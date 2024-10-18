@@ -1,0 +1,29 @@
+name: cf-cli-action
+description: This action allows to use CF CLI in GH Workflows
+inputs:
+  cf_package:
+    description: The name of the apt package name for the CF CLI
+    required: false
+  cf_api:
+    description: The Cloud Foundry API endpoint
+    required: true
+  cf_user:
+    description: The user name/email used for login
+    required: true
+  cf_pwd:
+    description: The user password used for login
+    required: true
+  cf_org:
+    description: The Cloud Foundry Organization
+    required: false
+  cf_space:
+    description: The Cloud Foundry Space
+    required: false  
+  cf_command:
+    description: The command passed to CF-CLI, omit the "cf"
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.cf_command }}
