@@ -1,5 +1,8 @@
 name: cf-cli-action
 description: This action allows to use CF CLI in GH Workflows
+branding:
+  icon: 'code'
+  color: 'purple'
 inputs:
   cf_package:
     description: The name of the apt package name for the CF CLI
