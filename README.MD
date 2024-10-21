@@ -30,7 +30,7 @@ jobs:
     steps:
       - name: do-stuff
         id: dostuff
-        uses: Nadki/cf-cli-action.git@1.0
+        uses: Nadki/cf-cli-action.git@v1.0.0
         with:
           package_name: ***
           cf_api: ***
