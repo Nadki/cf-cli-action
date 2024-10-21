@@ -1,4 +1,4 @@
-name: cf-cli-action
+name: cf-cli-action-ubuntu
 description: This action allows to use CF CLI in GH Workflows
 branding:
   icon: 'code'
