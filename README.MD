@@ -6,7 +6,7 @@ Use Cloud Foundry CLI with this action.
 
 To use this action, add it to your GitHub Workflow and set the following parameters:
 
-|  Parameter |                    Descriptio                   |
+|  Parameter |                    Description                   |
 |:----------:|:-----------------------------------------------:|
 | cf_package | The name of the apt package name for the CF CLI |
 |   cf_api   |          The Cloud Foundry API endpoint         |
