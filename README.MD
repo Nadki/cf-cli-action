@@ -8,7 +8,7 @@ To use this action, add it to your GitHub Workflow and set the following paramet
 
 |  Parameter |                    Description                   |
 |:----------:|:-----------------------------------------------:|
-| cf_package | The name of the apt package name for the CF CLI |
+| cf_package | The name of the apt package for the CF CLI |
 |   cf_api   |          The Cloud Foundry API endpoint         |
 |   cf_user  |        The user name/email used for login       |
 |   cf_pwd   |         The user password used for login        |
