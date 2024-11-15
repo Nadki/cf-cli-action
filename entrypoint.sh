@@ -1,11 +1,13 @@
 #!/bin/sh -l
 
 # install package
-apt-get update
-apt-get install -y ca-certificates jq
-echo "deb [trusted=yes] https://packages.cloudfoundry.org/debian stable main" > /etc/apt/sources.list.d/cloudfoundry-cli.list
-apt-get update
-apt-get install -y $INPUT_PACKAGE_NAME
+
+# ...first add the Cloud Foundry Foundation public key and package repository to your system
+wget -q -O - https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key | gpg --dearmor -o /usr/share/keyrings/cli.cloudfoundry.org.gpg
+echo "deb https://packages.cloudfoundry.org/debian stable main" | sudo tee /etc/apt/sources.list.d/cloudfoundry-cli.list
+# ...then, update your local package index, then finally install the cf CLI
+sudo apt-get update
+sudo apt-get install -y $INPUT_PACKAGE_NAME
 
 # verify version
 cf version
