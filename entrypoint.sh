@@ -5,7 +5,7 @@ apt-get update
 apt-get install -y ca-certificates jq
 echo "deb [trusted=yes] https://packages.cloudfoundry.org/debian stable main" > /etc/apt/sources.list.d/cloudfoundry-cli.list
 apt-get update
-apt-get install -y $INPUT_PACKAGE_NAME
+apt-get install -y $INPUT_CF_PACKAGE
 
 # verify version
 cf version
